@@ -1,0 +1,421 @@
+body{
+    font-family          : sans-serif;
+    font-size            : 16px;
+    line-height          : 1.6em;  
+    color                : #222222;
+    background-color     : #F9F9F9;
+}
+
+                                                        /*  image d'accueil */
+#lycee {
+    width                : 100%;
+    max-width            : 600px;
+    display              : block;
+    margin-left          : auto;
+    margin-right         : auto;
+    padding              : 0.5em;
+}
+
+                                                 /*  titrages (hors articles) */
+
+h1 {
+    font-size            : 1.2em;
+    font-weight          : bold;
+}
+
+h2 {
+    font-size            : 1.0em;
+    font-weight          : bold;
+}   
+
+h3 {
+    font-size            : 0.9em;
+    font-weight          : bold;  
+    font-style           : italic;     
+}   
+
+h4 {
+    font-size            : 0.8em;
+    font-weight          : bold;  
+    font-style           : italic;     
+}   
+
+
+pre {
+    font-size            : 0.8em;
+    margin-top           : 0px; 
+    padding-top          : 0px;
+}
+
+                                                    /* NAVIGATION PRINCIPALE*/
+
+.main-nav {
+    background-color     : white;
+    padding-top          : 0.5em;
+    padding-bottom       : 0.4em;
+}
+
+.main-nav i:first-child{
+    background-color     : red;
+    color                : white;
+    font-style           : normal;
+    font-size            : 18px;
+    padding-top          : 0.5em;
+    padding-bottom       : 0.5em;
+    padding-left         : 0.5em;
+    padding-right        : 0.5em;
+}
+.main-nav b {
+    color                : #222222;
+    font-size            : 20px;
+    margin-left          : 0.3em;
+    margin-right         : 0.3em;
+}
+
+
+.main-nav em{
+    font-style           : italic;
+    font-family          : serif;
+}
+
+#main-menu a {                
+    color                : blue;  
+    text-decoration      : none;    
+}  
+
+
+.main-menu-visible {
+    display              : block;
+    background-color     : #F0F0F0;
+    margin-top           : 0.5em;
+    margin-bottom        : 0em;
+}
+.main-menu-visible li {
+    list-style-type      : none;
+}
+.main-menu-invisible {
+    display              : none;
+}
+
+
+#main-menu li:nth-child(even){
+    background-color     : #F0F0F0; /*#F9F9F9;*/
+    padding-left         : 1em;
+    margin-left          : -2.5em;
+}
+#main-menu li:nth-child(odd){
+    background-color     : #F0F0F0;
+    padding-left         : 1em;
+    margin-left          : -2.5em;    
+}
+
+#main-menu li b{
+    font-size            : 1em;
+    color                : blue;  
+    margin-left          : 0em;
+    
+}
+
+                                                    /* NAVIGATION SECONDAIRE */
+.sub-nav {                
+    background-color     : lightgrey;    
+}
+#sous-menu a {                
+    color                : blue;
+    text-decoration      : none;
+} 
+.sous-menu-visible {
+    display              : block;
+    background-color     : #F0F0F0;
+    margin-top           : 0.1em;
+    margin-bottom        : 0em;
+    color                : blue;
+}
+
+.sous-menu-visible ol {
+    counter-reset        : chapitres;
+    list-style-position  : inside;
+}
+.sous-menu-visible li{
+    list-style-type      : none;
+    counter-increment    : chapitres;
+}
+.sous-menu-visible li:before{
+    content              : counter(chapitres) ". " ;
+    font-style           : normal;
+    margin-right         : 0.5em;
+}
+
+.sous-menu-invisible {
+    display              : none;
+}
+
+#sous-menu li:nth-child(even){
+    background-color     : #F0F0F0; /*#F9F9F9;*/
+    padding-left         : 1em;
+    margin-left          : -2.5em;
+}
+#sous-menu li:nth-child(odd){
+    background-color     : #F0F0F0;
+    padding-left         : 1em;
+    margin-left          : -2.5em;    
+}
+
+#sous-menu p {
+    padding-left         : 2em;
+    margin-left          : -2.5em;    
+}
+
+                                                 /* NAVIGATION retour arrière */
+
+#nav-goback{
+    color                : blue;
+    font-weight          : bold;
+}
+
+
+                                                    /* STYLE ARTICLE        */
+
+article {
+    counter-reset        : h2-compteur;
+}
+                                                    /*  paragraphes */
+p {
+    text-align           : left;  
+    text-justify         : auto;
+    margin-left          : 1em;
+    
+    -webkit-margin-before: 0.6em;
+    -webkit-margin-after : 0.6em;
+}
+
+                                                    /* titres et numérotation */
+h1 {
+    text-align           : center;
+    border-bottom-style  : solid;
+    border-bottom-width  : 1px;
+    border-bottom-color  : black;
+}
+
+h2  {
+    counter-reset        : h3-compteur;
+}
+
+h2:before{
+    content              : counter(h2-compteur) ". ";
+    counter-increment    : h2-compteur;
+    color                : red;
+    font-size            : 1.2em;
+    font-weight          : lighter;
+}
+
+h3:before{
+    content              :  counter(h2-compteur) "." counter(h3-compteur) ". ";
+    counter-increment    : h3-compteur;
+    color                : red;
+    font-size            : 1.1em;
+    font-weight          : lighter;
+}
+
+h3  {
+    counter-reset        : h4-compteur;
+}
+
+h4:before{
+    content              :  counter(h2-compteur) "." counter(h3-compteur)"." 
+        counter(h4-compteur) ". ";
+    counter-increment    : h4-compteur;
+    color                : red;
+    font-size            : 0.8em;
+    font-weight          : lighter;
+}
+
+                                                        /*  illustrations */
+
+figure{    
+    margin-left          : 1em;
+    margin-right         : 0em;
+    background-color     : white;
+}
+
+figure img {
+    width                : 90%;
+    max-width            : 10cm;
+    display              : block;
+    margin-left          : auto;
+    margin-right         : auto;
+}
+
+figcaption {
+    text-align           : center;
+    font-size            : 0.9em;
+    font-style           : italic;
+}
+
+                                                        /*  tableaux */
+table {
+    border-collapse      : collapse;
+    border-bottom        : 1px solid;
+    margin-left          : 1em;
+    margin-right         : auto;
+}
+
+td{
+    text-align           : center;
+}
+
+th {
+    border-bottom        : 1px solid;
+    border-top           : 1px solid;    
+}
+
+                                                        /*  ? */
+
+details{
+    margin-left          : 1em;
+}
+
+details p {
+    margin-left          : 0em;
+}
+
+details details {
+    margin-left          : 0em;
+}
+
+                                                        /*  exercices */
+
+.exercice {
+    background-color     : aliceblue;
+}
+
+.exercice summary {
+    font-weight          : bold;
+    font-size            : 0.8em;
+}
+
+.exercice div {
+   /* %margin-left       : 1em; */
+}
+
+.correction {
+    background-color     : #F5FFF5;
+}
+
+                                                        /*  liens */
+
+article a {
+   color                 : blue;
+   text-decoration       : none; 
+}
+
+                                                        /* videos */
+.container {
+    position             : relative;
+    width                : 90%;
+    height               : 0;
+    margin-left          : 1em;
+    padding-bottom       : 56.25%;
+}
+
+.video {
+    position             : absolute;
+    top                  : 0;
+    left                 : 0;
+    width                : 100%;
+    height               : 100%;
+}
+
+                                                        /*  infobulle */
+i.bulle {
+    color                :blue;
+}
+
+.info-off {	
+    display              : none;
+    
+}
+
+.info-on {
+    display              : block;
+    position             : absolute;
+    background-color     : bisque;
+    width                : 80vw;
+    z-index              : 12;
+    padding              : 0.5em;
+    color                :  #222222;
+    border-radius        : 0.5em;
+}
+
+                                                       /*  tableau avancement */
+
+.tab-avancement table, th, td{
+    border               : 1px solid black;
+    text-align           : center;
+    padding              : 0.2em;    
+}
+
+.tab-avancement caption {
+    font-style           : italic;
+    padding-bottom       : 0.5em;
+}
+
+
+@media screen and (min-width: 15cm) {
+    body{
+        margin-left      : 2.5cm;
+        margin-right     : 2.5cm;
+    }
+    
+}
+                                 /* GESTION DES STYLES POUR IMPRESSION PAPIER 
+                                    Attention ! voir aussi script.js 
+                                 */
+@media print {
+    
+    
+    /*  suppression menus */    
+    .main-nav{
+        display          : none;
+    } 
+    
+    .sub-nav {
+        display          : none;
+    }
+    
+                                                            /*  marges papier */    
+    body {
+        size             : A4;        
+        margin-top       : 1.5cm;
+	margin-right     : 1.2cm;
+	margin-bottom    : 2.0cm;
+	margin-left      : 1.2cm
+    }
+                                                             /*  format texte */
+    article {
+        /* column-count    : 2; MathJax bugue si deux colonnes pour formules sur
+        une ligne seule, pb d'affichage uniquement avec Chrome, 
+        mais Ok pour Firefox - pb de définition des tailles de caractères? */
+        column-count: 2;
+        column-gap: 12pt;
+    }
+    
+    p, ul, table, figure {
+        color            : black;
+        font-size        : 9pt;
+        line-height      : 1.4em; 
+    }
+    h1 {
+        column-span      : all;       
+    }
+    
+    h1, h2, h3, h4, h5 {
+        page-break-after : avoid;
+    }
+    
+    figure img{
+        max-height       : 25vh;
+        page-break-inside: avoid;
+    }
+    
+}

@@ -1,0 +1,1 @@
+<p id="nav-goback" onclick="window.history.back();">Retour au cours</p>
