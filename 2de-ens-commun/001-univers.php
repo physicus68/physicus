@@ -23,6 +23,17 @@ include "debut.php";
                     3-la rétine est l’écran.</p>
         </div>
     </details>
+            
+    <details class="exercice">                                                  <!-- exercice 1 -->
+        <summary>Exercice n<sup>1</sup>1</summary>
+        <div>
+            <p> L'énoncé de l'exercice est ici</p>
+            <details class="correction">
+                <summary>Correction n<sup>1</sup>1</summary>    
+                <p>Le texte est ici.</p>
+        </div>
+    </details>            
+            
 
 </article>
 
